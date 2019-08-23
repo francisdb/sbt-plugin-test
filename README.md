@@ -9,6 +9,8 @@ credentials ++= Seq(
 )
 ```
 
+(you also have the rights to publish to that nexus)
+
 reproduce by running the `testproject` with `1.2.8` and `1.3.0-RC4`
 
 ```
