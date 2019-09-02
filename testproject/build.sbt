@@ -9,5 +9,10 @@ lazy val root = (project in file("."))
   .enablePlugins(HelloPlugin)
   .settings(
     name := "testproject",
-    libraryDependencies += scalaTest % Test
+    libraryDependencies ++= Seq(
+      "com.example" %% "libproject" % "0.1.0-SNAPSHOT",
+      scalaTest % Test
+    )
   )
+
+resolvers += "test repository" at "http://167.71.68.47:8081/repository/maven-snapshots"
