@@ -1,15 +1,27 @@
 # sbt-plugin-test
 repro for https://github.com/sbt/sbt/issues/4852
 
+# Provisioned Nexus repo
+
+Nexus repo and artifacts are listed below
+```
+http://167.71.68.47:8081/repository/maven-snapshots
+
+"com.example" %% "libproject" % "0.1.0-SNAPSHOT"
+"com.example" % "sbt-plugin-test" % "0.1.0-SNAPSHOT"
+```
+
 add this to `~/.sbt/global.sbt`
 
-```
+```scala
 credentials ++= Seq(
   Credentials("Sonatype Nexus Repository Manager", "167.71.68.47", "test", "test")
 )
 ```
 
 (you also have the rights to publish to that nexus)
+
+# Reproducer
 
 reproduce by running the `testproject` with `1.2.8` and `1.3.0-RC4`
 
