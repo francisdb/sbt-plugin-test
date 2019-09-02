@@ -4,11 +4,16 @@ repro for https://github.com/sbt/sbt/issues/4852
 # Provisioned Nexus repo
 
 Nexus repo and artifacts are listed below
+
 ```
 http://167.71.68.47:8081/repository/maven-snapshots
 
 "com.example" %% "libproject" % "0.1.0-SNAPSHOT"
 "com.example" % "sbt-plugin-test" % "0.1.0-SNAPSHOT"
+
+com/example/sbt-plugin-test_2.12_1.0/0.1.0-SNAPSHOT/sbt-plugin-test-0.1.0-SNAPSHOT.jar
+com/example/libproject_2.13/0.1.0-SNAPSHOT/libproject_2.13-0.1.0-SNAPSHOT.jar
+
 ```
 
 add this to `~/.sbt/global.sbt`
